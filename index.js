@@ -43,7 +43,11 @@ async function getMoveShit(char){
                 }
     
             });
-            resolve(movesReturn);
+            let returnChar = {
+                Name: char[0].toUpperCase() + char.slice(1),
+                Attacks: movesReturn
+            }
+            resolve(returnChar);
     
     
         })
